@@ -32,16 +32,21 @@ class WeatherEntry:
                 "Invalid date format. Use YYYY-MM-DD"
             )
 
-    def validate_temperature(self, temperature):
+   def validate_temperature(self, temperature):
 
-        try:
-            return float(temperature)
+    if temperature is None:
+        raise ValueError(
+            "Temperature cannot be empty"
+        )
 
-        except ValueError:
-            raise ValueError(
-                "Temperature must be a number"
-            )
+    try:
+        return float(temperature)
 
+    except (ValueError, TypeError):
+        raise ValueError(
+            "Temperature must be a number"
+        )
+        
     def to_dict(self):
 
         return {
