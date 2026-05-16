@@ -2,7 +2,7 @@
 
 ## Author
 
-YOUR NAME SURNAME
+Arina Andreeva
 
 ---
 
