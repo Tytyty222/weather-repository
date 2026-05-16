@@ -48,3 +48,7 @@ def load_entries(filename):
     except json.JSONDecodeError:
         print("Invalid JSON format")
         return []
+
+    except IOError:
+        print("Error reading file")
+        return []
